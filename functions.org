@@ -1,0 +1,29 @@
+* J Symbol/function definitions
+http://www.jsoftware.com/help/learning/02.htm
+
+Important to note that a dyadic with imbalanced sides will auto-expand
+the smaller side to fill out the sides with equal balance.
+
+| Base   | Monadic (right)                      | Dyadic (fork)                                       |
+|--------+--------------------------------------+-----------------------------------------------------|
+| >      | Open                                 | Larger Than                                         |
+| >.     | Ceiling                              | Larger Of                                           |
+| >:     | Increment                            | Larger or Equal  (bitmask)                          |
+| <      | Box                                  | Less Than                                           |
+| <.     | Floor                                | Lesser Of                                           |
+| <:     | Decrement                            | Lesser or Equal (bitmask)                           |
+| (pipe) |                                      | Residue (flipped modulo)                            |
+| <#>    | Tally/Length                         | Take (bitmask # list)                               |
+| <*>    |                                      | Product                                             |
+| <*>:   | Square                               |                                                     |
+| <=>:   |                                      | Assignment                                          |
+| <$>    | Dimensions/Rank (its shape)          | Build Table ( <dim:x by y> $ elems )                |
+| ,      |                                      | Append ('mr','smith' = mrsmith                      |
+| </>    | Insert Between (Fold/Reduce)         |                                                     |
+| <{>    |                                      | From (select nth item, 0 index)                     |
+| i.     | Range (successive integers, or list) | Index Of                                            |
+| -:     |                                      | Match (same shape and values, single 0 or 1 retval) |
+| <=>    |                                      | Equal (per element compare, makes bitmask)          |
+| ;      |                                      | Link (boxes 2 things together)                      |
+| ":     | Format (number to string)            |                                                     |
+|        |                                      |                                                     |
