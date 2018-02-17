@@ -2,6 +2,8 @@
 
 ;;; Code:
 
+;; http://www.jsoftware.com/help/dictionary/vocabul.htm
+
 (defvar j-console-bin "~/jbld/j64/bin/jconsole"
   "The location of the jconsole binary.
 
