@@ -17,5 +17,26 @@ a jconsole in PATH.")
   (switch-to-buffer (make-comint "jconsole" j-console-bin))
   )
 
+(defconst j-mode-font-lock-keywords-1
+  (list
+   '("\\([[:lower:]]+?\\)=" 1 font-lock-function-name-face)
+   '("=[:.]" . font-lock-keyword-face)
+   '("NB\\..*" . font-lock-comment-face)
+   '("[[:upper:]][[:lower:]]*" . font-lock-variable-name-face)
+   ))
+
+;;;###autoload
+(define-derived-mode j-mode text-mode "J" ()
+  "Major mode for editing J files."
+  :group 'languages
+  (set (make-local-variable 'font-lock-defaults)
+       '(j-mode-font-lock-keywords-1)))
+
+;;;###autoload
+(defun j-config ()
+  "Default pickle setup and bindings."
+  (interactive)
+  (add-to-list 'auto-mode-alist '("\\.ijs\\'" . j-mode)))
+
 (provide 'j)
 ;;; j.el ends here
