@@ -17,19 +17,21 @@ a jconsole in PATH.")
   ;; (comint-run j-console-bin)
   (switch-to-buffer (make-comint "jconsole" j-console-bin)))
 
-(defvar j-mode-verb-regex
+(defconst j-mode-verb-regex
   (rx
    " "
    (one-or-more
-    (char ?- ?< ?> ?. ?: ?+ ?* ?- ?% ?^ ?$ ?# ?! "~" ";" ?@ ?&))
+    (char ?- ?< ?> ?. ?: ?+ ?* ?- ?% ?^ ?$ ?# ?! "~" ";" ?@ ?& "{" "," "["))
    " "))
 
 (defconst j-mode-font-lock-keywords-1
   (list
    '("NB\\..*" . font-lock-comment-face)
+   '("\\(\".*?\"\\)" . font-lock-string-face)
+   '("\\('.*?'\\)" . font-lock-string-face)
    `(,j-mode-verb-regex . font-lock-builtin-face)
    '("\\(i\\.\\|a\\.\\)" . font-lock-builtin-face)
-   '("\\(exit\\|sdcheck\\|coinsert\\|monad\\|define\\|smoutput\\|while.\\|end.\\|do.\\)" . font-lock-builtin-face)
+   '("\\(exit\\|coinsert\\|monad\\|define\\|smoutput\\|while.\\|end.\\|do.\\)" . font-lock-builtin-face)
    '("\\([a-z][a-zA-Z0-9]*\\)[ ]*=[:.]*" 1 font-lock-function-name-face)
    '("=[:.]*" . font-lock-keyword-face)
    '("[[:upper:]][[:lower:]]*" . font-lock-variable-name-face)
