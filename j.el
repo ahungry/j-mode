@@ -50,7 +50,7 @@ a jconsole in PATH.")
   (rx
    " "
    (one-or-more
-    (char ?- ?< ?> ?. ?: ?+ ?* ?- ?% ?^ ?$ ?# ?! "~" ";" ?@ ?& "{" "," "["))
+    (char ?- ?< ?> ?. ?: ?+ ?* ?- "%" ?^ ?$ ?# ?! "~" ";" ?@ "&" "{" "," "["))
    " "))
 
 (defconst j-mode-font-lock-keywords-1
