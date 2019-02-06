@@ -20,8 +20,8 @@ a jconsole in PATH.")
 (defconst j-mode-font-lock-keywords-1
   (list
    '("NB\\..*" . font-lock-comment-face)
-   '("\\([[:lower:]]+?\\)=" 1 font-lock-function-name-face)
-   '("=[:.]" . font-lock-keyword-face)
+   '("^\\([a-zA-Z0-9]+?\\)=" 1 font-lock-function-name-face)
+   '("=[:.]*" . font-lock-keyword-face)
    '("[[:upper:]][[:lower:]]*" . font-lock-variable-name-face)
    ))
 
