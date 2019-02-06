@@ -1,4 +1,4 @@
-;;; j-mode.el --- Major mode for editing J (APL like)  files.  -*- lexical-binding: t -*-
+;;; j.el --- Major mode for editing J (APL like)  files.  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2018, 2019 Matthew Carter <m@ahungry.com>
 
