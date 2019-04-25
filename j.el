@@ -60,10 +60,10 @@ a jconsole in PATH.")
    '("\\('.*?'\\)" . font-lock-string-face)
    `(,j-mode-verb-regex . font-lock-builtin-face)
    '("\\(&\\|i\\.\\|a\\.\\)" . font-lock-builtin-face)
-   '("\\(exit\\|coinsert\\|monad\\|define\\|smoutput\\|while\\.\\|end\\.\\|do\\.\\)" . font-lock-builtin-face)
-   '("\\([a-z][a-zA-Z0-9]*\\)[ ]*=[:.]*" 1 font-lock-function-name-face)
+   '("\\(exit\\|coinsert\\|monad\\|define\\|smoutput\\|while\\.\\|end\\.\\|else\\.\\|if\\.\\|do\\.\\)" . font-lock-builtin-face)
+   '("\\([A-Za-z_][a-zA-Z0-9_]*\\)[ ]*=[:.]+" 1 font-lock-function-name-face)
    '("=[:.]*" . font-lock-keyword-face)
-   '("[[:upper:]][[:lower:]]*" . font-lock-variable-name-face)
+   ;; '("[[:upper:][:lower:]]*" . font-lock-variable-name-face)
    ))
 
 ;;;###autoload
